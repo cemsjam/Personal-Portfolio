@@ -6,3 +6,9 @@ html,
 body {
 	height: 100%;
 }
+@media (min-width: 64em) {
+	.main-navigation-drawer {
+		visibility: visible;
+		transform: translateX(0);
+	}
+}
