@@ -5,10 +5,9 @@ import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
 	return (
-		<footer className="border-t border-t-slate-200 mt-auto py-6 dark:bg-black bg-blue-300">
+		<footer className="border-t border-t-zinc-200 dark:border-t-zinc-800 mt-auto py-6">
 			<div className="container flex items-center justify-between text-xs">
 				<div className="flex items-center gap-4">
-					&copy;
 					<ThemeSwitch />
 				</div>
 				<div>
