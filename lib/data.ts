@@ -14,10 +14,6 @@ export const mainNavLinks = [
 		hash: "#projects",
 	},
 	{
-		name: "Skills",
-		hash: "#skills",
-	},
-	{
 		name: "Experience",
 		hash: "#experience",
 	},

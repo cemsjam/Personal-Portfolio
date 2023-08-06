@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import GradientCard from "@/components/GradientCard";
-import Header from "@/components/Header";
+import Header from "@/components/layout/header/Header";
 
 export default function Home() {
 	return (

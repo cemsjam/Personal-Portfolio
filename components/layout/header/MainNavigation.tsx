@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
 
 import ToggleMenu from "./ToggleMenu";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../../ThemeSwitch";
 import NavigationLinks from "./NavigationLinks";
 
 export default function MainNavigation() {
@@ -17,7 +17,7 @@ export default function MainNavigation() {
 		<div>
 			<ToggleMenu toggleMenu={toggleMenu} />
 			<Transition.Root show={openMenu} as={Fragment}>
-				<Dialog as="div" className="relative z-10 lg:hidden" onClose={setOpenMenu}>
+				<Dialog as="div" className="relative z-50 lg:hidden" onClose={setOpenMenu}>
 					<Transition.Child
 						as={Fragment}
 						enter="ease-in-out duration-500"
@@ -28,11 +28,11 @@ export default function MainNavigation() {
 						leaveTo="opacity-0"
 					>
 						{/* backdrop */}
-						<div className="fixed inset-0 bg-white/30 backdrop-blur-sm transition-opacity" />
+						<div className="fixed inset-0 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm transition-opacity" />
 					</Transition.Child>
 
 					<div className="fixed inset-0 overflow-hidden">
-						<div className="pointer-events-none fixed inset-y-0 left-0 flex w-full">
+						<div className="pointer-events-none fixed inset-y-0 left-0 flex max-w-[80%] w-full lg:max-w-md">
 							<Transition.Child
 								as={Fragment}
 								enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -43,7 +43,7 @@ export default function MainNavigation() {
 								leaveTo="-translate-x-full"
 							>
 								<Dialog.Panel className="pointer-events-auto w-full">
-									<div className="flex flex-col h-full max-w-[80%] w-full t-bg-color lg:max-w-md border-r t-border-color">
+									<div className="flex flex-col h-full  t-bg-color border-r t-border-color">
 										<div className="flex items-center justify-between h-16 px-4 sm:px-6 border-b t-border-color">
 											<button type="button" onClick={() => setOpenMenu(false)}>
 												<span className="sr-only">Close panel</span>
@@ -61,7 +61,7 @@ export default function MainNavigation() {
 					</div>
 				</Dialog>
 			</Transition.Root>
-			<NavigationLinks classes="hidden lg:block" />
+			<NavigationLinks classes="hidden lg:block" desktop />
 		</div>
 	);
 }

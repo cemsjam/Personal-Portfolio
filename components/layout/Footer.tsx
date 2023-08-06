@@ -1,5 +1,5 @@
 import { mainNavLinks } from "@/lib/data";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 

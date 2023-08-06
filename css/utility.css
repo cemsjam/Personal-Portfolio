@@ -1,0 +1,15 @@
+.t-bg-color {
+	@apply bg-white dark:bg-black transition-all;
+}
+.t-text-color {
+	@apply text-zinc-500 dark:text-zinc-400 transition-all;
+}
+.t-header-color {
+	@apply text-zinc-900 dark:text-zinc-50 transition-all;
+}
+.t-border-color {
+	@apply border-zinc-200 dark:border-zinc-800 transition-all;
+}
+.t-hover-bg-color {
+	@apply hover:bg-zinc-100 hover:dark:bg-zinc-800;
+}

@@ -11,20 +11,17 @@ export default function ThemeSwitch() {
 		let localTheme = window.localStorage.getItem("theme");
 		if (localTheme !== null) {
 			const parsedLocalTheme = JSON.parse(localTheme);
-			console.log("comes from localstorage", parsedLocalTheme);
 			document.documentElement.dataset.mode = parsedLocalTheme;
 			setTheme(parsedLocalTheme);
 		} else {
 			let systemTheme = window.matchMedia("(prefers-color-scheme:dark)").matches
 				? "dark"
 				: ("light" as Theme);
-			console.log("comes from system");
 			document.documentElement.dataset.mode = systemTheme;
 			setTheme(systemTheme);
 		}
 	}, []);
 	const toggleTheme = () => {
-		console.log("toggle ran");
 		let currentTheme = (theme === "dark" ? "light" : "dark") as Theme;
 		document.documentElement.dataset.mode = currentTheme;
 		window.localStorage.setItem("theme", JSON.stringify(currentTheme));
