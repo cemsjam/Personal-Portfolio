@@ -1,0 +1,62 @@
+/* TEXT: light -> zinc-500 dark-> zinc-400 */
+/* HEADER: light -> zinc-900 dark -> zinc-50  */
+/* BORDER: light -> zinc-200 dark-> zinc-800 */
+.t-bg-color {
+	@apply bg-white dark:bg-black;
+}
+.t-text-color {
+	@apply text-zinc-500 dark:text-zinc-400;
+}
+.t-header-color {
+	@apply text-zinc-900 dark:text-zinc-50;
+}
+.t-border-color {
+	@apply border-zinc-200 dark:border-zinc-800;
+}
+.gradient-border-parent {
+	border-radius: 14px;
+	padding: 1px;
+	overflow: hidden;
+}
+.gradient-border {
+	position: relative;
+	border-radius: 14px;
+	@apply border border-zinc-200 dark:border-zinc-800;
+	@apply bg-white dark:bg-zinc-900;
+}
+.gradient-border::before {
+	content: "";
+	border-radius: 14px;
+	display: block;
+	opacity: 0;
+	position: absolute;
+	inset: -100px;
+	z-index: -1;
+}
+html[data-mode="dark"] .gradient-border::before {
+	background: linear-gradient(
+		360deg,
+		hsla(0, 0%, 100%, 0.5),
+		hsla(0, 0%, 100%, 0.1),
+		#fff,
+		hsla(0, 0%, 100%, 0.3)
+	);
+}
+html[data-mode="light"] .gradient-border::before {
+	background: linear-gradient(360deg, #00db80, #fff, #35e3dbb3, #1de2b44d);
+}
+
+.gradient-border-parent:hover .gradient-border::before {
+	animation: gradient-rotate 5s linear 0s infinite reverse;
+	opacity: 1;
+	transition: all 0.3s linear;
+}
+
+@keyframes gradient-rotate {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}

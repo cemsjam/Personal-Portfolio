@@ -1,8 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const quicksand = Quicksand({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+// const quicksand = Quicksand({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
 	title: "Cemre | Personal Portfolio",
@@ -12,9 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body
-				className={`${quicksand.className} flex flex-col bg-white text-zinc-500 dark:bg-black `}
-			>
+			<body className={`${inter.className} flex flex-col t-bg-color t-text-color`}>
 				{children}
 			</body>
 		</html>

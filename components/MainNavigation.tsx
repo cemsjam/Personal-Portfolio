@@ -1,57 +1,67 @@
 "use client";
-import Link from "next/link";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
 
-import { cn } from "@/lib/utils";
-import { mainNavLinks } from "@/lib/data";
 import ToggleMenu from "./ToggleMenu";
 import ThemeSwitch from "./ThemeSwitch";
-import { useState } from "react";
+import NavigationLinks from "./NavigationLinks";
 
 export default function MainNavigation() {
 	const [openMenu, setOpenMenu] = useState(false);
 	const toggleMenu = () => {
 		setOpenMenu((prev) => !prev);
 	};
-	const closeMenu = () => {
-		setOpenMenu(false);
-	};
 	return (
 		// drawer
 		<div>
 			<ToggleMenu toggleMenu={toggleMenu} />
-			<div
-				className={cn(
-					"main-navigation-drawer -translate-x-full transition-transform fixed lg:static left-0 top-0 h-screen lg:h-auto w-[300px] lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none invisible",
-					{
-						"translate-x-0 visible": openMenu,
-					}
-				)}
-			>
-				{/* drawer header */}
-				<div className="flex justify-between items-center h-16 px-4 sm:px-6 border-b border-b-slate-300 lg:hidden">
-					<button type="button" onClick={closeMenu}>
-						<IoMdClose size={24} />
-						<span className="sr-only">Close Main Navigation</span>
-					</button>
-					<div className="logo">logo</div>
-					<ThemeSwitch />
-				</div>
-				{/* menu */}
-				<nav>
-					<ul className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
-						{mainNavLinks.map((nav) => {
-							return (
-								<li key={nav.hash}>
-									<Link href={nav.hash} className="block w-full px-4 py-4 sm:px-6 lg:p-0">
-										{nav.name}
-									</Link>
-								</li>
-							);
-						})}
-					</ul>
-				</nav>
-			</div>
+			<Transition.Root show={openMenu} as={Fragment}>
+				<Dialog as="div" className="relative z-10 lg:hidden" onClose={setOpenMenu}>
+					<Transition.Child
+						as={Fragment}
+						enter="ease-in-out duration-500"
+						enterFrom="opacity-0"
+						enterTo="opacity-100"
+						leave="ease-in-out duration-500"
+						leaveFrom="opacity-100"
+						leaveTo="opacity-0"
+					>
+						{/* backdrop */}
+						<div className="fixed inset-0 bg-white/30 backdrop-blur-sm transition-opacity" />
+					</Transition.Child>
+
+					<div className="fixed inset-0 overflow-hidden">
+						<div className="pointer-events-none fixed inset-y-0 left-0 flex w-full">
+							<Transition.Child
+								as={Fragment}
+								enter="transform transition ease-in-out duration-500 sm:duration-700"
+								enterFrom="-translate-x-full"
+								enterTo="translate-x-0"
+								leave="transform transition ease-in-out duration-500 sm:duration-700"
+								leaveFrom="translate-x-0"
+								leaveTo="-translate-x-full"
+							>
+								<Dialog.Panel className="pointer-events-auto w-full">
+									<div className="flex flex-col h-full max-w-[80%] w-full t-bg-color lg:max-w-md border-r t-border-color">
+										<div className="flex items-center justify-between h-16 px-4 sm:px-6 border-b t-border-color">
+											<button type="button" onClick={() => setOpenMenu(false)}>
+												<span className="sr-only">Close panel</span>
+												<IoMdClose className="h-6 w-6" aria-hidden="true" />
+											</button>
+											<div className="logo">logo</div>
+											<ThemeSwitch />
+										</div>
+										{/* content */}
+										<NavigationLinks classes="lg:hidden" />
+									</div>
+								</Dialog.Panel>
+							</Transition.Child>
+						</div>
+					</div>
+				</Dialog>
+			</Transition.Root>
+			<NavigationLinks classes="hidden lg:block" />
 		</div>
 	);
 }

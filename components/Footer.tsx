@@ -6,13 +6,13 @@ import SocialLinks from "./SocialLinks";
 export default function Footer() {
 	return (
 		<footer className="border-t border-t-zinc-200 dark:border-t-zinc-800 mt-auto py-6">
-			<div className="container flex items-center justify-between text-xs">
+			<div className="container flex flex-col lg:flex-row items-center justify-between gap-4 text-xs">
 				<div className="flex items-center gap-4">
 					<ThemeSwitch />
 				</div>
 				<div>
 					<nav>
-						<ul className="flex lg:items-center gap-4">
+						<ul className="flex flex-wrap justify-center lg:flex-nowrap lg:items-center gap-4">
 							{mainNavLinks.map((nav) => {
 								return (
 									<li key={nav.hash}>
