@@ -1,7 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
-import { mainNavLinks } from "@/lib/data";
+import { mainNavLinks } from "@/constants/data";
 import { cn } from "@/lib/utils";
 
 type NavigationLinksProps = {
@@ -10,6 +11,8 @@ type NavigationLinksProps = {
 };
 
 export default function NavigationLinks({ classes, desktop = false }: NavigationLinksProps) {
+	const { i18n } = useTranslation();
+	const currentLocale = i18n.language;
 	return (
 		<nav className={cn("block", classes)}>
 			<ul className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
@@ -17,7 +20,8 @@ export default function NavigationLinks({ classes, desktop = false }: Navigation
 					return (
 						<li key={nav.hash}>
 							<Link
-								href={nav.hash}
+								href={`${currentLocale}/${nav.hash}`}
+								locale={currentLocale}
 								className={cn("block w-full px-4 py-4 sm:px-6", {
 									"lg:px-3 lg:py-2 t-hover-bg-color rounded-md hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
 										desktop,

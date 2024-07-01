@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { socials } from "@/lib/data";
+import { socials } from "@/constants/data";
 
 export default function SocialLinks() {
 	const customStyles = {

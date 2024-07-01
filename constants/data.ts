@@ -3,23 +3,23 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 export const mainNavLinks = [
 	{
 		name: "Home",
-		hash: "#home",
+		hash: "/home",
 	},
 	{
 		name: "About",
-		hash: "#about",
+		hash: "/about",
 	},
 	{
 		name: "Projects",
-		hash: "#projects",
+		hash: "/projects",
 	},
 	{
 		name: "Experience",
-		hash: "#experience",
+		hash: "/experience",
 	},
 	{
 		name: "Contact",
-		hash: "#contact",
+		hash: "/contact",
 	},
 ] as const;
 

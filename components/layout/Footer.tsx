@@ -1,4 +1,4 @@
-import { mainNavLinks } from "@/lib/data";
+import { mainNavLinks } from "@/constants/data";
 import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
