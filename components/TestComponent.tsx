@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useLocale, useTranslations } from "next-intl";
 
 function TestComponent() {
-	const { t } = useTranslation();
-	return <div>{t("test")}</div>;
+	const t = useTranslations();
+	const locale = useLocale();
+	return <div>{locale}</div>;
 }
 
 export default TestComponent;
