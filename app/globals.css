@@ -64,6 +64,23 @@
 	* {
 		@apply border-border;
 	}
+	html {
+		-webkit-tap-highlight-color: transparent;
+	}
+	html[data-mode="dark"] {
+		color-scheme: dark;
+	}
+	html[data-mode="light"] {
+		color-scheme: light;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-zinc-900 dark:text-zinc-50;
+	}
 	body {
 		@apply bg-background text-foreground;
 	}
