@@ -4,10 +4,10 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 import { type Locale } from "@/src/i18n";
-import { GlobeIcon } from "lucide-react";
+import { SlGlobe } from "react-icons/sl";
+import { FaGlobeAmericas } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuCheckboxItem,
@@ -16,6 +16,7 @@ import {
 	DropdownMenuTrigger,
 	DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import { socialLinkCustomStylesForGradient } from "./layout/Widgets";
 
 export const LanguageSwitcher = () => {
 	const locale = useLocale() as Locale;
@@ -28,11 +29,16 @@ export const LanguageSwitcher = () => {
 	}
 
 	return (
-		<DropdownMenu>
+		<DropdownMenu modal={false}>
 			<DropdownMenuTrigger asChild>
-				<Button type="button" variant="default" className="gradient-border-parent">
-					<GlobeIcon className="w-5" />
-				</Button>
+				<div className="gradient-border-parent" style={socialLinkCustomStylesForGradient}>
+					<button
+						type="button"
+						className="gradient-border flex items-center justify-center h-8 w-8"
+					>
+						<SlGlobe size={18} className="text-zinc-700 dark:text-white" />
+					</button>
+				</div>
 			</DropdownMenuTrigger>
 
 			<DropdownMenuContent align="end">
@@ -45,7 +51,7 @@ export const LanguageSwitcher = () => {
 						handleLocaleChange("en");
 					}}
 				>
-					English
+					{t("english")}
 				</DropdownMenuCheckboxItem>
 				<DropdownMenuCheckboxItem
 					checked={locale === "tr"}
@@ -53,7 +59,7 @@ export const LanguageSwitcher = () => {
 						handleLocaleChange("tr");
 					}}
 				>
-					Turkish
+					{t("turkish")}
 				</DropdownMenuCheckboxItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

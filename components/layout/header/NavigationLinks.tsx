@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 
-import { mainNavLinks } from "@/constants/data";
 import { cn } from "@/lib/utils";
+import { TranslateNavLinks } from "../../TranslateNavLink";
 
 type NavigationLinksProps = {
 	classes?: string;
@@ -10,8 +12,7 @@ type NavigationLinksProps = {
 };
 
 export default function NavigationLinks({ classes, desktop = false }: NavigationLinksProps) {
-	// const { i18n } = useTranslation();
-	// const currentLocale = i18n.language;
+	const mainNavLinks = TranslateNavLinks();
 	return (
 		<nav className={cn("block", classes)}>
 			<ul className="flex flex-col lg:flex-row lg:items-center lg:gap-8">

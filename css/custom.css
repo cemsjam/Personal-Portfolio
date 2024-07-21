@@ -3,7 +3,8 @@
 	padding: 1px;
 	overflow: hidden;
 }
-.gradient-border {
+.gradient-border,
+.gradient-border[type="button"] {
 	position: relative;
 	border-radius: var(--gradient-border-radius, 14px);
 	@apply border border-zinc-200 dark:border-zinc-800;

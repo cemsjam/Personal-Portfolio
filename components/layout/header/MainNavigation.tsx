@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
 
 import ToggleMenu from "./ToggleMenu";
-import ThemeSwitch from "../../ThemeSwitch";
+import ThemeSwitch from "../../ThemeSwitcher";
 import NavigationLinks from "./NavigationLinks";
 
 export default function MainNavigation() {

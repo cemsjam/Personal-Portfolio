@@ -4,7 +4,7 @@ import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 type Theme = "light" | "dark";
 
-export default function ThemeSwitch() {
+export default function ThemeSwitcher() {
 	const [theme, setTheme] = useState<Theme>("dark");
 
 	useEffect(() => {
