@@ -1,3 +1,16 @@
 {
-	"language": "Language"
+	"language": "Language",
+	"turkish": "Turkish",
+	"english": "English",
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"projects": "Projects",
+		"experience": "Experience",
+		"contact": "Contact"
+	},
+	"socials": {
+		"github": "Visit Github Page",
+		"linkedin": "Visit LinkedIn Page"
+	}
 }

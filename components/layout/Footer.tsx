@@ -1,9 +1,11 @@
-import { mainNavLinks } from "@/constants/data";
-import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
-import SocialLinks from "./SocialLinks";
+
+import ThemeSwitch from "../ThemeSwitcher";
+import Widgets from "@/components/layout/Widgets";
+import { TranslateNavLinks } from "../TranslateNavLink";
 
 export default function Footer() {
+	const mainNavLinks = TranslateNavLinks();
 	return (
 		<footer className="border-t border-t-zinc-200 dark:border-t-zinc-800 mt-auto py-6">
 			<div className="container flex flex-col lg:flex-row items-center justify-between gap-4 text-xs">
@@ -24,7 +26,7 @@ export default function Footer() {
 					</nav>
 				</div>
 				<div>
-					<SocialLinks />
+					<Widgets />
 				</div>
 			</div>
 		</footer>

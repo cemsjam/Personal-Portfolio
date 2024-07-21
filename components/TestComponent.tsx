@@ -3,9 +3,9 @@ import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 
 function TestComponent() {
-	const t = useTranslations();
 	const locale = useLocale();
-	return <div>{locale}</div>;
+	console.log("currentLocale", locale);
+	return <></>;
 }
 
 export default TestComponent;

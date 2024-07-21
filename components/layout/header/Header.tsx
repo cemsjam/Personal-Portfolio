@@ -1,5 +1,5 @@
 import MainNavigation from "./MainNavigation";
-import SocialLinks from "../SocialLinks";
+import Widgets from "@/components/layout/Widgets";
 
 function Header() {
 	return (
@@ -8,7 +8,7 @@ function Header() {
 				<div className="logo order-2 lg:order-none">logo</div>
 				<MainNavigation />
 				<div className="order-3 lg:order-none">
-					<SocialLinks />
+					<Widgets />
 				</div>
 			</div>
 		</header>
