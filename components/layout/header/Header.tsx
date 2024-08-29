@@ -11,6 +11,7 @@ function Header() {
 					<Widgets />
 				</div>
 			</div>
+			<div className="clipped-bg"></div>
 		</header>
 	);
 }

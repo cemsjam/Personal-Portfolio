@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useId } from "react";
 import { useRouter } from "next/navigation";
 
 import { type Locale } from "@/src/i18n";
@@ -30,12 +30,9 @@ export const LanguageSwitcher = () => {
 
 	return (
 		<DropdownMenu modal={false}>
-			<DropdownMenuTrigger asChild>
+			<DropdownMenuTrigger id="lang-trigger" asChild>
 				<div className="gradient-border-parent" style={socialLinkCustomStylesForGradient}>
-					<button
-						type="button"
-						className="gradient-border flex items-center justify-center h-8 w-8"
-					>
+					<button type="button" className="gradient-border flex items-center justify-center h-8 w-8">
 						<SlGlobe size={18} className="text-zinc-700 dark:text-white" />
 					</button>
 				</div>
@@ -46,6 +43,7 @@ export const LanguageSwitcher = () => {
 				<DropdownMenuSeparator />
 
 				<DropdownMenuCheckboxItem
+					id="lang-dropdown-en"
 					checked={locale === "en"}
 					onClick={() => {
 						handleLocaleChange("en");
@@ -54,6 +52,7 @@ export const LanguageSwitcher = () => {
 					{t("english")}
 				</DropdownMenuCheckboxItem>
 				<DropdownMenuCheckboxItem
+					id="lang-dropdown-tr"
 					checked={locale === "tr"}
 					onClick={() => {
 						handleLocaleChange("tr");
