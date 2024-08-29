@@ -6,6 +6,7 @@ import TestComponent from "@/components/TestComponent";
 import Header from "@/components/layout/header/Header";
 import GradientCard from "@/components/GradientCard";
 import Footer from "@/components/layout/Footer";
+import Email from "@/src/emails/Welcome";
 
 export default function Home() {
 	return (
@@ -17,6 +18,14 @@ export default function Home() {
 					<GradientCard />
 				</div>
 				<TestComponent />
+				{/* <Email /> */}
+				<button
+					onClick={async () => {
+						await fetch("/api/email", { method: "POST" });
+					}}
+				>
+					Send Email
+				</button>
 			</main>
 
 			<Footer />
