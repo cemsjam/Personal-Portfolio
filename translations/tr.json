@@ -12,5 +12,11 @@
 	"socials": {
 		"github": "Github Sayfasına Git",
 		"linkedin": "LinkedIn Sayfasına Git"
+	},
+	"contact-component": {
+		"title": "İletişim",
+		"info-start": "Lütfen doğrudan benimle iletişime geçin",
+		"info-end": "veya bu formu kullanarak.",
+		"send-email": "Gönder"
 	}
 }

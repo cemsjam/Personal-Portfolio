@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import ThemeSwitch from "../ThemeSwitcher";
 import Widgets from "@/components/layout/Widgets";
-import { TranslateNavLinks } from "../TranslateNavLink";
+import { TranslateNavLinks } from "../dynamic-translations/TranslateNavLink";
 
 export default function Footer() {
 	const mainNavLinks = TranslateNavLinks();

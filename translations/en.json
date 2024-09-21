@@ -12,5 +12,11 @@
 	"socials": {
 		"github": "Visit Github Page",
 		"linkedin": "Visit LinkedIn Page"
+	},
+	"contact-component": {
+		"title": "Contact Me",
+		"info-start": "Please contact me directly at",
+		"info-end": "or through this form.",
+		"send-email": "Send Email"
 	}
 }
