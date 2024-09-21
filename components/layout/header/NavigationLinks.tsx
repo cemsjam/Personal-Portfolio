@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { TranslateNavLinks } from "../../TranslateNavLink";
+import { TranslateNavLinks } from "@/components/dynamic-translations/TranslateNavLink";
 
 type NavigationLinksProps = {
 	classes?: string;
@@ -22,7 +22,7 @@ export default function NavigationLinks({ classes, desktop = false }: Navigation
 							<Link
 								href="test"
 								className={cn("block w-full px-4 py-4 sm:px-6", {
-									"lg:px-3 lg:py-2 t-hover-bg-color rounded-md hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
+									"lg:px-3 lg:py-2 t-hover-bg-color rounded-md  dark:text-white hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
 										desktop,
 								})}
 							>

@@ -2,30 +2,34 @@
 
 import React from "react";
 
-import TestComponent from "@/components/TestComponent";
 import Header from "@/components/layout/header/Header";
-import GradientCard from "@/components/GradientCard";
 import Footer from "@/components/layout/Footer";
-import Email from "@/src/emails/Welcome";
+import { Contact } from "@/components/layout/Contact";
+import HeroSection from "@/components/layout/HeroSection";
+import AboutMe from "@/components/layout/AboutMe";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
-			<main className="flex min-h-screen flex-col items-center gap-10 p-24">
-				<div className="container grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+			<main className="flex min-h-screen flex-col items-center gap-10 p-4">
+				{/* <div className="container grid md:grid-cols-3 lg:grid-cols-4 gap-4">
 					<GradientCard />
 					<GradientCard />
 				</div>
-				<TestComponent />
+				<TestComponent /> */}
+				{/* HERO */}
+				<HeroSection />
+				<AboutMe />
 				{/* <Email /> */}
-				<button
+				{/* <button
 					onClick={async () => {
 						await fetch("/api/email", { method: "POST" });
 					}}
 				>
 					Send Email
-				</button>
+				</button> */}
+				<Contact />
 			</main>
 
 			<Footer />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TranslateSocialLinks } from "../TranslateSocialLink";
+import { TranslateSocialLinks } from "@/components/dynamic-translations/TranslateSocialLink";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export const socialLinkCustomStylesForGradient = {
@@ -14,11 +14,7 @@ export default function Widgets() {
 				<LanguageSwitcher />
 			</li>
 			{socials.map((item) => (
-				<li
-					key={item.label}
-					className="gradient-border-parent"
-					style={socialLinkCustomStylesForGradient}
-				>
+				<li key={item.label} className="gradient-border-parent" style={socialLinkCustomStylesForGradient}>
 					<Link
 						href={item.href}
 						title={item.label}

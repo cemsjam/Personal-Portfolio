@@ -1,18 +1,19 @@
 .gradient-border-parent {
-	border-radius: var(--gradient-border-radius, 14px);
+	--gradient-border-radius: 8px;
+	border-radius: var(--gradient-border-radius, 8px);
 	padding: 1px;
 	overflow: hidden;
 }
 .gradient-border,
 .gradient-border[type="button"] {
 	position: relative;
-	border-radius: var(--gradient-border-radius, 14px);
+	border-radius: var(--gradient-border-radius, 8px);
 	@apply border border-zinc-200 dark:border-zinc-800;
 	@apply bg-white dark:bg-zinc-900;
 }
 .gradient-border::before {
 	content: "";
-	border-radius: var(--gradient-border-radius, 14px);
+	border-radius: var(--gradient-border-radius, 8px);
 	display: block;
 	opacity: 0;
 	position: absolute;
@@ -25,8 +26,11 @@ html[data-mode="dark"] .gradient-border::before {
 html[data-mode="light"] .gradient-border::before {
 	background: linear-gradient(360deg, #00db80, #fff, #35e3dbb3, #1de2b44d);
 }
+html[data-mode="light"] .gradient-border[type="button"] {
+	border-radius: calc(var(--gradient-border-radius) - 1px);
+}
 .gradient-border-parent:hover .gradient-border::before {
-	animation: gradient-rotate 5s linear 0s infinite reverse;
+	animation: gradient-rotate 4s linear 0s infinite reverse;
 	opacity: 1;
 	transition: all 0.3s linear;
 }
