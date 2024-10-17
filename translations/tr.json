@@ -18,5 +18,8 @@
 		"info-start": "Lütfen doğrudan benimle iletişime geçin",
 		"info-end": "veya bu formu kullanarak.",
 		"send-email": "Gönder"
+	},
+	"about-me": {
+		"title": "Hakkımda"
 	}
 }
