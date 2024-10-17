@@ -22,7 +22,7 @@ export const Contact = () => {
 	};
 	return (
 		<div className="w-full max-w-screen-md mx-auto mt-auto">
-			<h3 className="text-3xl font-medium capitalize mb-8 text-center">{t("title")}</h3>
+			<h3 className="text-3xl font-bold capitalize mb-8 text-center">{t("title")}</h3>
 			<p className="text-gray-700 -mt-6 dark:text-white/80 text-center">
 				{t("info-start")}{" "}
 				<a className="underline" href="mailto:cemrekur@gmail.com">

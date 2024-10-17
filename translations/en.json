@@ -18,5 +18,8 @@
 		"info-start": "Please contact me directly at",
 		"info-end": "or through this form.",
 		"send-email": "Send Email"
+	},
+	"about-me": {
+		"title": "About"
 	}
 }
