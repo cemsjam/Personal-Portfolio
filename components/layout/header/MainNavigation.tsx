@@ -6,6 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import ToggleMenu from "./ToggleMenu";
 import ThemeSwitch from "../../ThemeSwitcher";
 import NavigationLinks from "./NavigationLinks";
+import Logo from "@/components/Logo";
 
 export default function MainNavigation() {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -49,7 +50,7 @@ export default function MainNavigation() {
 												<span className="sr-only">Close panel</span>
 												<IoMdClose className="h-6 w-6" aria-hidden="true" />
 											</button>
-											<div className="logo">logo</div>
+											<Logo classes="order-none" />
 											<ThemeSwitch />
 										</div>
 										{/* content */}

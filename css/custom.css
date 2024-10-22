@@ -43,3 +43,9 @@ html[data-mode="light"] .gradient-border[type="button"] {
 	z-index: -1;
 	width: 100%;
 } */
+html[data-mode="dark"] .gradient-inject-bg {
+	background: linear-gradient(360deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1), #fff, hsla(0, 0%, 100%, 0.3));
+}
+html[data-mode="light"] .gradient-inject-bg {
+	background: linear-gradient(360deg, #00db80, #fff, #35e3dbb3, #1de2b44d);
+}

@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { Contact } from "@/components/layout/Contact";
 import HeroSection from "@/components/layout/HeroSection";
 import AboutMe from "@/components/layout/AboutMe";
+import Projects from "@/components/layout/Projects";
 
 export default function Home() {
 	return (
@@ -21,6 +22,7 @@ export default function Home() {
 				{/* HERO */}
 				<HeroSection />
 				<AboutMe />
+				<Projects />
 				{/* <Email /> */}
 				{/* <button
 					onClick={async () => {

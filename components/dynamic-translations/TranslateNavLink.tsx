@@ -6,10 +6,10 @@ export const TranslateNavLinks = () => {
 	const t = useTranslations("nav");
 
 	return [
-		{
-			name: t("home"),
-			hash: "/home",
-		},
+		// {
+		// 	name: t("home"),
+		// 	hash: "/home",
+		// },
 		{
 			name: t("about"),
 			hash: "/about",
