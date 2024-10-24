@@ -21,7 +21,7 @@ export const Contact = () => {
 		console.log({ senderEmail, message });
 	};
 	return (
-		<section className="w-full">
+		<section className="w-full px-4">
 			<div className="w-full max-w-screen-md mx-auto mt-auto">
 				<h3 className="text-3xl font-bold capitalize mb-8 text-center">{t("title")}</h3>
 				<p className="text-gray-700 -mt-6 dark:text-white/80 text-center">
