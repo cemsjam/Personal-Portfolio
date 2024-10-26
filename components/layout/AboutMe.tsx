@@ -1,6 +1,7 @@
 import { Locale } from "@/src/i18n";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
+import SectionMainHeadings from "../SectionMainHeadings";
 
 const AboutMe = () => {
 	const locale = useLocale() as Locale;
@@ -8,7 +9,7 @@ const AboutMe = () => {
 	return (
 		<section className="min-h-[45dvh] w-full py-8 px-4 md:py-4 flex justify-center items-center">
 			<div className="max-w-[80ch] mx-auto">
-				<h3 className="text-3xl text-center font-bold mb-8">{t("title")}</h3>
+				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<div className="dark:text-white">
 					{locale === "en" && (
 						<>

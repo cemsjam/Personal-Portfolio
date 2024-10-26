@@ -3,35 +3,36 @@ import Image from "next/image";
 import React from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Link from "next/link";
+import SectionMainHeadings from "../SectionMainHeadings";
 
 function Projects() {
 	const t = useTranslations("projects");
 	return (
-		<section className="w-full flex flex-col gap-8 container">
-			<h3 className="text-3xl text-center font-bold mb-8">{t("title")}</h3>
+		<section className="w-full flex flex-col gap-24">
+			<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 			{/* PROJECT 1 E-COMMERCE */}
-			<div className=" min-h-[75dvh]">
-				<h4 className="text-xl font-bold mb-8">{"1)"} E-commerce App</h4>
-				<div className="grid grid-flow-row md:grid-flow-col md:grid-cols-2 gap-4">
+			<div className=" max-w-screen-2xl w-full mx-auto px-4">
+				<div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
 					{/* IMAGE SIDE */}
-					<div className="flex items-center justify-center">
-						<div className=" w-full max-w-sm md:max-w-[400px] mx-auto lg:mx-0 rounded-md overflow-hidden shadow-2xl">
+					<div className="flex md:w-1/2 items-center justify-center">
+						<div className=" w-full max-w-sm md:max-w-none lg:mx-0 rounded-2xl overflow-hidden project-image-shadow -mt-[6rem]">
 							<Toolbar />
-							<div className="border border-zinc-600 ">
+							<div className="border border-zinc-600 overflow-hidden rounded-b-2xl ">
 								<Link href={"https://cems-react-ecommerce.netlify.app/"} target="_blank" rel="noopener noreferrer">
 									<Image
 										src={"/static/images/ecommerce-app-home-page.png"}
 										className="w-full"
 										alt="Cemre's personal image"
-										width={400}
-										height={400}
+										width={576}
+										height={1024}
 									/>
 								</Link>
 							</div>
 						</div>
 					</div>
 					{/* INFO SIDE */}
-					<div>
+					<div className="md:w-1/2">
+						<ProjectHeading> E-commerce App</ProjectHeading>
 						<Accordion type="single" collapsible className="w-full">
 							<AccordionItem value="item-1">
 								<AccordionTrigger>Fully Responsive Design</AccordionTrigger>
@@ -96,11 +97,11 @@ function Projects() {
 				</div>
 			</div>
 			{/* PROJECT 2 WORDLE */}
-			<div className=" min-h-[75dvh]">
-				<h4 className="text-xl font-bold mb-8">{"2)"} Wordle Clone</h4>
-				<div className="grid grid-flow-row md:grid-flow-col md:grid-cols-2 gap-4">
+			<div className=" max-w-screen-2xl w-full mx-auto px-4">
+				<div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
 					{/* INFO SIDE */}
-					<div>
+					<div className="md:w-1/2">
+						<ProjectHeading>Wordle Clone</ProjectHeading>
 						<Accordion type="single" collapsible className="w-full">
 							<AccordionItem value="wordle-item-1">
 								<AccordionTrigger>Word Guessing Game</AccordionTrigger>
@@ -172,10 +173,10 @@ function Projects() {
 						</Accordion>
 					</div>
 					{/* IMAGE SIDE */}
-					<div className="flex items-center justify-center">
-						<div className=" w-full max-w-sm md:max-w-[400px] mx-auto lg:mx-0 rounded-md overflow-hidden shadow-2xl">
+					<div className="flex md:w-1/2 items-center justify-center">
+						<div className=" w-full max-w-sm md:max-w-none lg:mx-0 rounded-2xl overflow-hidden project-image-shadow -mt-[6rem]">
 							<Toolbar />
-							<div className="border border-zinc-600 self-center">
+							<div className="border border-zinc-600 overflow-hidden rounded-b-2xl self-center">
 								<Link
 									href={"https://cems-simplified-wordle-clone.netlify.app/"}
 									target="_blank"
@@ -185,8 +186,8 @@ function Projects() {
 										src={"/static/images/wordle-clone-app.png"}
 										className="w-full"
 										alt="Cemre's personal image"
-										width={400}
-										height={400}
+										width={576}
+										height={1024}
 									/>
 								</Link>
 							</div>
@@ -200,6 +201,9 @@ function Projects() {
 
 export default Projects;
 
+function ProjectHeading({ children }: { children: React.ReactNode }) {
+	return <h4 className="text-4xl font-bold mb-8">{children}</h4>;
+}
 function Toolbar() {
 	return (
 		<div className="h-8 bg-zinc-600  flex items-center p-1">
