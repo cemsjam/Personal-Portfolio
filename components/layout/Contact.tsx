@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React from "react";
+import SectionMainHeadings from "../SectionMainHeadings";
 
 export const Contact = () => {
 	const t = useTranslations("contact-component");
@@ -23,7 +24,7 @@ export const Contact = () => {
 	return (
 		<section className="w-full px-4">
 			<div className="w-full max-w-screen-md mx-auto mt-auto">
-				<h3 className="text-3xl font-bold capitalize mb-8 text-center">{t("title")}</h3>
+				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<p className="text-gray-700 -mt-6 dark:text-white/80 text-center">
 					{t("info-start")}{" "}
 					<a className="underline" href="mailto:cemrekur@gmail.com">
