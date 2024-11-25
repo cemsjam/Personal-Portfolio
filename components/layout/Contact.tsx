@@ -22,7 +22,7 @@ export const Contact = () => {
 		console.log({ senderEmail, message });
 	};
 	return (
-		<section className="w-full px-4">
+		<section className="w-full px-4 mb-12">
 			<div className="w-full max-w-screen-md mx-auto mt-auto">
 				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<p className="text-gray-700 -mt-6 dark:text-white/80 text-center">
@@ -47,12 +47,10 @@ export const Contact = () => {
 						required
 						maxLength={5000}
 					/>
-					<div className="flex justify-center">
-						<div className="gradient-border-parent w-full lg:w-fit">
-							<button className="py-3 px-4 w-full lg:w-fit lg:py-4 lg:px-20 gradient-border t-text-color">
-								{t("send-email")}
-							</button>
-						</div>
+					<div className="mt-4 flex justify-center">
+						<button className="py-3 px-4 w-full lg:w-fit lg:py-4 lg:px-20 font-bold primary-button rounded-lg">
+							{t("send-email")}
+						</button>
 					</div>
 				</form>
 			</div>

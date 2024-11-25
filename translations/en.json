@@ -13,6 +13,10 @@
 		"github": "Visit Github Page",
 		"linkedin": "Visit LinkedIn Page"
 	},
+	"hero": {
+		"contactLabel": "Contact me here",
+		"downloadLabel": "Download CV"
+	},
 	"contact-component": {
 		"title": "Contact Me",
 		"info-start": "Please contact me directly at",
@@ -23,6 +27,8 @@
 		"title": "About"
 	},
 	"projects": {
-		"title": "Projects"
+		"title": "Projects",
+		"sourceCodeLabel": "Source Code",
+		"visitSiteLabel": "Visit Site"
 	}
 }

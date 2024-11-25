@@ -13,6 +13,10 @@
 		"github": "Github Sayfasına Git",
 		"linkedin": "LinkedIn Sayfasına Git"
 	},
+	"hero": {
+		"contactLabel": "İletişim",
+		"downloadLabel": "CV İndir"
+	},
 	"contact-component": {
 		"title": "İletişim",
 		"info-start": "Lütfen doğrudan benimle iletişime geçin",
@@ -23,6 +27,8 @@
 		"title": "Hakkımda"
 	},
 	"projects": {
-		"title": "Projeler"
+		"title": "Projeler",
+		"sourceCodeLabel": "Kaynak Kod",
+		"visitSiteLabel": "Siteye Git"
 	}
 }
