@@ -9,9 +9,10 @@ import { TranslateNavLinks } from "@/components/dynamic-translations/TranslateNa
 type NavigationLinksProps = {
 	classes?: string;
 	desktop?: boolean;
+	closeMenu?: () => void;
 };
 
-export default function NavigationLinks({ classes, desktop = false }: NavigationLinksProps) {
+export default function NavigationLinks({ classes, closeMenu, desktop = false }: NavigationLinksProps) {
 	const mainNavLinks = TranslateNavLinks();
 	return (
 		<nav className={cn("block", classes)}>
@@ -20,7 +21,8 @@ export default function NavigationLinks({ classes, desktop = false }: Navigation
 					return (
 						<li key={nav.hash}>
 							<Link
-								href="test"
+								onClick={!desktop ? closeMenu : undefined}
+								href={nav.hash}
 								className={cn("block w-full px-4 py-4 sm:px-6", {
 									"lg:px-3 lg:py-2 t-hover-bg-color rounded-md  dark:text-white hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
 										desktop,

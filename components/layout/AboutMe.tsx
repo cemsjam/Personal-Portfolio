@@ -7,7 +7,7 @@ const AboutMe = () => {
 	const locale = useLocale() as Locale;
 	const t = useTranslations("about-me");
 	return (
-		<section className="min-h-[45dvh] w-full py-8 px-4 md:py-4 flex justify-center items-center">
+		<section id="about" className="min-h-[45dvh] w-full py-8 px-4 md:py-4 flex justify-center items-center">
 			<div className="max-w-[80ch] mx-auto">
 				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<div className="dark:text-white">

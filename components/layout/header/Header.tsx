@@ -4,7 +4,7 @@ import Widgets from "@/components/layout/Widgets";
 
 function Header() {
 	return (
-		<header>
+		<header className="shadow">
 			<div className="container flex items-center justify-between h-16">
 				<Logo />
 				<MainNavigation />

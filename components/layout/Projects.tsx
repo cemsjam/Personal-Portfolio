@@ -15,7 +15,7 @@ function Projects() {
 	const t = useTranslations("projects");
 	const locale = useLocale() as Locale;
 	return (
-		<section className="w-full flex flex-col gap-24">
+		<section id="projects" className="w-full flex flex-col gap-24">
 			<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 
 			{/* PROJECT 1 E-COMMERCE */}
@@ -65,7 +65,7 @@ function Projects() {
 						{locale === "tr" && (
 							<Accordion type="single" collapsible className="project-accordion w-full ">
 								<AccordionItem value="item-1">
-									<AccordionTrigger>Tamamen Duyarlı Tasarım</AccordionTrigger>
+									<AccordionTrigger>Responsive(Duyarlı) Tasarım</AccordionTrigger>
 									<AccordionContent>Tüm cihazlarda sorunsuz kullanım için optimize edilmiştir.</AccordionContent>
 								</AccordionItem>
 
@@ -285,10 +285,10 @@ function Projects() {
 								</AccordionItem>
 
 								<AccordionItem value="wordle-item-7">
-									<AccordionTrigger>Duyarlı Tasarım</AccordionTrigger>
+									<AccordionTrigger>Responsive(Duyarlı) Tasarım</AccordionTrigger>
 									<AccordionContent>
-										Hem masaüstü hem de mobil cihazlarda sorunsuz bir şekilde oynanabilmesini sağlayan tamamen duyarlı
-										tasarım.
+										Hem masaüstü hem de mobil cihazlarda sorunsuz bir şekilde oynanabilmesini sağlayan
+										Responsive(Duyarlı) tasarım.
 									</AccordionContent>
 								</AccordionItem>
 
@@ -416,6 +416,182 @@ function Projects() {
 									/>
 								</Link>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* PROJECT 3 CROWDFUNDING */}
+			<div className=" max-w-screen-2xl w-full mx-auto px-4">
+				<div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
+					{/* IMAGE SIDE */}
+					<div className="flex md:w-1/2 items-center justify-center">
+						<div className=" w-full max-w-sm md:max-w-none lg:mx-0 rounded-2xl overflow-hidden project-image-shadow -mt-[6rem]">
+							<Toolbar />
+							<div className="border border-zinc-600 overflow-hidden rounded-b-2xl self-center">
+								<Link
+									href={"https://crowdfunding-product-page-cems.netlify.app/"}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src={"/static/images/crowdfunding.png"}
+										className="w-full"
+										alt="Cemre's personal image"
+										width={576}
+										height={1024}
+									/>
+								</Link>
+							</div>
+						</div>
+					</div>
+					{/* INFO SIDE */}
+					<div className="md:w-1/2">
+						<ProjectHeading>Crowdfunding Page</ProjectHeading>
+						{/* STACKS */}
+						<div className="mb-4">
+							<h3 className="font-semibold mb-4">Tech Stacks</h3>
+							<ul className="flex gap-2">
+								<li>
+									<FaHtml5 size={24} fill="#e34c26" />
+								</li>
+								<li>
+									<IoLogoCss3 size={24} fill="rebeccapurple" />
+								</li>
+								<li>
+									<IoLogoJavascript size={24} fill="text-black" />
+								</li>
+							</ul>
+						</div>
+						{locale === "tr" && (
+							<Accordion type="single" collapsible className="project-accordion w-full">
+								<AccordionItem value="feature-item-1">
+									<AccordionTrigger>Responsive(Duyarlı) Tasarım</AccordionTrigger>
+									<AccordionContent>
+										Tamamen duyarlı tasarım, tüm cihazlarda ve ekran boyutlarında sorunsuz bir kullanıcı deneyimi
+										sağlar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-2">
+									<AccordionTrigger>Akıcı Geçişler</AccordionTrigger>
+									<AccordionContent>
+										Sayfa ve bileşenler arasında pürüzsüz geçişler ile kullanıcı deneyimini geliştirir.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-3">
+									<AccordionTrigger>Modal Uygulaması</AccordionTrigger>
+									<AccordionContent>
+										JavaScript ile oluşturulan modallar, açıldığında klavye tuşlarının sıkışmasını önleyerek
+										erişilebilirliği artırır.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-4">
+									<AccordionTrigger>Klavye Tuş Sırası Kontrolü</AccordionTrigger>
+									<AccordionContent>
+										Modallar açıkken kullanıcıların sekme tuşu sırasını yakalayarak etkili ve erişilebilir bir gezinme
+										sunar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-5">
+									<AccordionTrigger>Özel Giriş Bileşenleri</AccordionTrigger>
+									<AccordionContent>
+										Herhangi bir ek kütüphane kullanılmadan sıfırdan oluşturulmuş özel giriş alanlarıyla benzersiz bir
+										dokunuş sağlar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-6">
+									<AccordionTrigger>Özel Açılır Menü İşlevselliği</AccordionTrigger>
+									<AccordionContent>
+										Kitaplık kullanmadan mobil cihazlarda gezinti için optimize edilmiş özel açılır menü işlevselliği
+										sunar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-7">
+									<AccordionTrigger>Renk Paleti ve Tasarım Tutarlılığı</AccordionTrigger>
+									<AccordionContent>
+										Belirlenmiş renk paletlerinin ve tasarım yönergelerinin doğru bir şekilde uygulanmasıyla estetik bir
+										uyum sağlanır.
+									</AccordionContent>
+								</AccordionItem>
+							</Accordion>
+						)}
+
+						{locale === "en" && (
+							<Accordion type="single" collapsible className="project-accordion w-full">
+								<AccordionItem value="feature-item-1">
+									<AccordionTrigger>Responsive Design</AccordionTrigger>
+									<AccordionContent>
+										A fully responsive layout ensures a seamless user experience across all devices and screen sizes.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-2">
+									<AccordionTrigger>Smooth Transitions</AccordionTrigger>
+									<AccordionContent>
+										Enhances user experience with smooth transitions between pages and components.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-3">
+									<AccordionTrigger>Modal Implementation</AccordionTrigger>
+									<AccordionContent>
+										Custom-built modals using JavaScript provide accessibility by trapping focus when open.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-4">
+									<AccordionTrigger>Keyboard Tab Order Control</AccordionTrigger>
+									<AccordionContent>
+										Improves navigation by ensuring effective and accessible tab order trapping when modals are active.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-5">
+									<AccordionTrigger>Custom Input Components</AccordionTrigger>
+									<AccordionContent>
+										Unique custom input fields, built from scratch without any additional libraries, add a personal
+										touch.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-6">
+									<AccordionTrigger>Custom Dropdown Functionality</AccordionTrigger>
+									<AccordionContent>
+										Optimized custom dropdowns for mobile navigation without relying on external libraries.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="feature-item-7">
+									<AccordionTrigger>Color Palette and Design Consistency</AccordionTrigger>
+									<AccordionContent>
+										Ensures aesthetic harmony through the precise implementation of predefined color palettes and design
+										guidelines.
+									</AccordionContent>
+								</AccordionItem>
+							</Accordion>
+						)}
+
+						{/* CTA */}
+						<div className="flex gap-2 mt-8">
+							<Link
+								href={""}
+								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 font-bold text-black border border-black rounded-full bg-white hover:bg-black hover:text-white active:scale-95"
+							>
+								{t("sourceCodeLabel")}
+							</Link>
+							<Link
+								href={"https://cems-simplified-wordle-clone.netlify.app/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 rounded-full font-bold primary-button-no-shadow"
+							>
+								{t("visitSiteLabel")}
+							</Link>
 						</div>
 					</div>
 				</div>

@@ -13,6 +13,9 @@ export default function MainNavigation() {
 	const toggleMenu = () => {
 		setOpenMenu((prev) => !prev);
 	};
+	const closeMenu = () => {
+		setOpenMenu(false);
+	};
 	return (
 		// drawer
 		<div>
@@ -54,7 +57,7 @@ export default function MainNavigation() {
 											<ThemeSwitch />
 										</div>
 										{/* content */}
-										<NavigationLinks classes="lg:hidden" />
+										<NavigationLinks closeMenu={closeMenu} classes="lg:hidden" />
 									</div>
 								</Dialog.Panel>
 							</Transition.Child>
