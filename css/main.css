@@ -1,6 +1,7 @@
 @import "./custom.css";
 @import "./animations.css";
 @import "./utility.css";
+
 :root {
 	/* --primary-btn-bg-clr: #d9fe54; */
 	--primary-btn-bg-clr: #ff7d1a;

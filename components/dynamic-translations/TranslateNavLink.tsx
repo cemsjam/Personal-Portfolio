@@ -12,11 +12,11 @@ export const TranslateNavLinks = () => {
 		// },
 		{
 			name: t("about"),
-			hash: "/about",
+			hash: "#about",
 		},
 		{
 			name: t("projects"),
-			hash: "/projects",
+			hash: "#projects",
 		},
 		{
 			name: t("experience"),
@@ -24,7 +24,7 @@ export const TranslateNavLinks = () => {
 		},
 		{
 			name: t("contact"),
-			hash: "/contact",
+			hash: "#contact",
 		},
 	];
 };
