@@ -14,23 +14,11 @@ export default function Home() {
 		<>
 			<Header />
 			<main className="flex min-h-screen flex-col items-center gap-10 overflow-hidden">
-				{/* <div className="container grid md:grid-cols-3 lg:grid-cols-4 gap-4">
-					<GradientCard />
-					<GradientCard />
-				</div>
-				<TestComponent /> */}
 				{/* HERO */}
 				<HeroSection />
 				<AboutMe />
 				<Projects />
-				{/* <Email /> */}
-				{/* <button
-					onClick={async () => {
-						await fetch("/api/email", { method: "POST" });
-					}}
-				>
-					Send Email
-				</button> */}
+
 				<Contact />
 			</main>
 
