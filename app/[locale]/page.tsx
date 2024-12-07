@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-
+import { Toaster } from "sonner";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/Footer";
 import { Contact } from "@/components/layout/Contact";
@@ -23,6 +23,7 @@ export default function Home() {
 			</main>
 
 			<Footer />
+			<Toaster position="top-right" richColors visibleToasts={1} />
 		</>
 	);
 }
