@@ -21,7 +21,9 @@
 		"title": "Contact Me",
 		"info-start": "Please contact me directly at",
 		"info-end": "or through this form.",
-		"send-email": "Send Email"
+		"send-email": "Send Email",
+		"success-message": "Email has been sent successfully.",
+		"error-message": "An error has occurred. Please contact us at cemrekur@gmail.com."
 	},
 	"about-me": {
 		"title": "About"

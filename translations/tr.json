@@ -21,7 +21,9 @@
 		"title": "İletişim",
 		"info-start": "Lütfen doğrudan benimle iletişime geçin",
 		"info-end": "veya bu formu kullanarak.",
-		"send-email": "Gönder"
+		"send-email": "Gönder",
+		"success-message": "E-posta başarıyla gönderildi.",
+		"error-message": "Bir hata oluştu. Lütfen cemrekur@gmail.com adresinden benimle iletişime geçin."
 	},
 	"about-me": {
 		"title": "Hakkımda"

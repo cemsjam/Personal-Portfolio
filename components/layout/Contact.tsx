@@ -1,23 +1,31 @@
 "use client";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "sonner";
 import SectionMainHeadings from "../SectionMainHeadings";
 
 export const Contact = () => {
 	const t = useTranslations("contact-component");
+	const [isPending, setIsPending] = useState(false);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		const senderEmail = formData.get("senderEmail");
 		const message = formData.get("message");
+		setIsPending(true);
 		try {
 			const res = await fetch("/api/email", { method: "POST", body: JSON.stringify({ senderEmail, message }) });
 			if (res.status === 200) {
 				const json = await res.json();
+				toast.success(t("success-message"));
 				console.info(json.message);
+				setIsPending(false);
 			}
 		} catch (error) {
 			console.log(error);
+			toast.error(t("error-message"));
+
+			setIsPending(false);
 		}
 		console.log({ senderEmail, message });
 	};
@@ -48,7 +56,10 @@ export const Contact = () => {
 						maxLength={5000}
 					/>
 					<div className="mt-4 flex justify-center">
-						<button className="py-3 px-4 w-full lg:w-fit lg:py-4 lg:px-20 font-bold primary-button rounded-lg">
+						<button
+							disabled={isPending}
+							className="py-3 px-4 w-full lg:w-fit lg:py-4 lg:px-20 font-bold primary-button rounded-lg disabled:opacity-50 disabled:active:scale-100 disabled:pointer-events-none"
+						>
 							{t("send-email")}
 						</button>
 					</div>

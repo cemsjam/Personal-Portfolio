@@ -18,7 +18,7 @@ export const ContactEmail = ({ authorName, message }: ContactEmailProps) => {
 				<Container style={container}>
 					<Section style={{ paddingBottom: "20px" }}>
 						<Row>
-							<Text style={heading}>Here's what {authorName} wrote</Text>
+							<Text style={heading}>Here&apos;s what {authorName} wrote</Text>
 							<Text style={review}>“{message}”</Text>
 						</Row>
 					</Section>
@@ -31,6 +31,7 @@ export const ContactEmail = ({ authorName, message }: ContactEmailProps) => {
 };
 
 export default ContactEmail;
+
 ContactEmail.PreviewProps = {
 	authorName: "Customer",
 	message: `“I would like to get in touch for an opportunity”`,
