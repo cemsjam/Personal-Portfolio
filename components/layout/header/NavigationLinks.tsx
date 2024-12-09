@@ -23,8 +23,8 @@ export default function NavigationLinks({ classes, closeMenu, desktop = false }:
 							<Link
 								onClick={!desktop ? closeMenu : undefined}
 								href={nav.hash}
-								className={cn("block w-full px-4 py-4 sm:px-6", {
-									"lg:px-3 lg:py-2 t-hover-bg-color rounded-md  dark:text-white hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
+								className={cn("block w-full px-4 py-4 sm:px-6 font-semibold", {
+									"lg:px-3 lg:py-2 t-hover-bg-color t-active-bg-color rounded-md dark:text-white hover:text-zinc-600 hover:dark:text-zinc-50 transition-colors":
 										desktop,
 								})}
 							>

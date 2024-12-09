@@ -17,6 +17,8 @@ export default function Widgets() {
 				<li key={item.label} className="gradient-border-parent" style={socialLinkCustomStylesForGradient}>
 					<Link
 						href={item.href}
+						target="_blank"
+						rel="noopener noreferrer"
 						title={item.label}
 						// className="block bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg rounded-lg"
 						className="gradient-border flex items-center justify-center h-8 w-8"

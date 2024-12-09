@@ -577,7 +577,7 @@ function Projects() {
 						)}
 
 						{/* CTA */}
-						<div className="flex gap-2 mt-8">
+						<div className="flex justify-end gap-2 mt-8">
 							<Link
 								href={""}
 								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 font-bold text-black border border-black rounded-full bg-white hover:bg-black hover:text-white active:scale-95"

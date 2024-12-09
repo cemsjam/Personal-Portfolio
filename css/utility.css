@@ -13,3 +13,6 @@
 .t-hover-bg-color {
 	@apply hover:bg-zinc-100 hover:dark:bg-zinc-800;
 }
+.t-active-bg-color {
+	@apply active:bg-zinc-200 active:dark:bg-zinc-700;
+}

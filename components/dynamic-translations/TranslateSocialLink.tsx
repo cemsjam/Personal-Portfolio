@@ -16,7 +16,7 @@ export const TranslateSocialLinks = () => {
 		{
 			label: t("linkedin"),
 			icon: AiFillLinkedin,
-			href: "https://github.com/cemsjam",
+			href: "https://www.linkedin.com/in/cemre-kur/",
 		},
 	];
 };
