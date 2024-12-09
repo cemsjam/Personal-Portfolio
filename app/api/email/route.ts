@@ -15,18 +15,14 @@ export async function POST(request: Request) {
 		// 	subject: "Portfolio Contact",
 		// 	react: ContactEmail({ authorName: senderEmail, message }),
 		// });
-		await new Promise((res, rej) => {
-			setTimeout(() => {
-				rej("test");
-			}, 1000);
-		});
+
 		const emailHtml = await render(ContactEmail({ authorName: senderEmail, message }));
-		// await sgMail.send({
-		// 	to: "cemrekur@gmail.com",
-		// 	from: "cemrekur@gmail.com", // Verified sender email
-		// 	subject: "Portfolio",
-		// 	html: emailHtml,
-		// });
+		await sgMail.send({
+			to: "cemrekur@gmail.com",
+			from: "cemrekur@gmail.com", // Verified sender email
+			subject: "Portfolio",
+			html: emailHtml,
+		});
 		return NextResponse.json({ message: "Successfully sent an email" }, { status: 200 });
 	} catch (error) {
 		console.error("Failed to send email:", error);

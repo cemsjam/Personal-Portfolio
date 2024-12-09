@@ -8,6 +8,7 @@ import { Contact } from "@/components/layout/Contact";
 import HeroSection from "@/components/layout/HeroSection";
 import AboutMe from "@/components/layout/AboutMe";
 import Projects from "@/components/layout/Projects";
+import Experience from "@/components/layout/Experience";
 
 export default function Home() {
 	return (
@@ -18,7 +19,7 @@ export default function Home() {
 				<HeroSection />
 				<AboutMe />
 				<Projects />
-
+				<Experience />
 				<Contact />
 			</main>
 

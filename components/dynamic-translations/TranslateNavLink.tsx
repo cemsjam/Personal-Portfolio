@@ -20,7 +20,7 @@ export const TranslateNavLinks = () => {
 		},
 		{
 			name: t("experience"),
-			hash: "/experience",
+			hash: "#experience",
 		},
 		{
 			name: t("contact"),

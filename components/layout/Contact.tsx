@@ -15,16 +15,18 @@ export const Contact = () => {
 		setIsPending(true);
 		try {
 			const res = await fetch("/api/email", { method: "POST", body: JSON.stringify({ senderEmail, message }) });
-			if (res.status === 200) {
-				const json = await res.json();
-				toast.success(t("success-message"));
-				console.info(json.message);
-				setIsPending(false);
+			if (!res.ok) {
+				const errorData = await res.json();
+				throw new Error(errorData.error || "An unexpected error occurred");
 			}
+
+			const json = await res.json();
+			toast.success(t("success-message"));
+			console.info(json.message);
 		} catch (error) {
 			console.log(error);
 			toast.error(t("error-message"));
-
+		} finally {
 			setIsPending(false);
 		}
 		console.log({ senderEmail, message });

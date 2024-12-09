@@ -25,6 +25,10 @@
 		"success-message": "Email has been sent successfully.",
 		"error-message": "An error has occurred. Please contact us at cemrekur@gmail.com."
 	},
+	"experience": {
+		"title": "Experience",
+		"summary": "1.5+ years of experience, primarily focusing on HTML, CSS (Bootstrap, SCSS), and JavaScript (Vue.js, React.js)."
+	},
 	"about-me": {
 		"title": "About"
 	},

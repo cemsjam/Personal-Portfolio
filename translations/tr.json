@@ -6,7 +6,7 @@
 		"home": "Ana Sayfa",
 		"about": "Hakkımda",
 		"projects": "Projeler",
-		"experience": "Geçmiş",
+		"experience": "Deneyim",
 		"contact": "İletişim"
 	},
 	"socials": {
@@ -24,6 +24,10 @@
 		"send-email": "Gönder",
 		"success-message": "E-posta başarıyla gönderildi.",
 		"error-message": "Bir hata oluştu. Lütfen cemrekur@gmail.com adresinden benimle iletişime geçin."
+	},
+	"experience": {
+		"title": "Deneyim",
+		"summary": "1.5+ yıllık deneyim, ağırlıklı olarak HTML, CSS (Bootstrap, SCSS) ve JavaScript (Vue.js, React.js) üzerinde çalışıldı."
 	},
 	"about-me": {
 		"title": "Hakkımda"
