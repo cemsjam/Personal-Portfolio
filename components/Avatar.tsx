@@ -10,6 +10,7 @@ function Avatar() {
 				className="max-w-[400px]"
 				src={"/static/images/casablanca-cems-transparent.png"}
 				alt="Cemre's personal image"
+				priority
 				width={400}
 				height={400}
 			/>

@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useId } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 
 import { type Locale } from "@/src/i18n";
 import { SlGlobe } from "react-icons/sl";
-import { FaGlobeAmericas } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 
 import {
@@ -25,7 +24,9 @@ export const LanguageSwitcher = () => {
 
 	function handleLocaleChange(newLocale: Locale): void {
 		document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+		// document.cookie = `PREFERRED_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
 		router.refresh();
+		// window.location.reload()
 	}
 
 	return (
