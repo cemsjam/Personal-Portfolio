@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 
 import { cn } from "@/lib/utils";
 // const quicksand = Quicksand({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -30,6 +30,7 @@ export default async function LocaleLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }) {
+	unstable_setRequestLocale(locale);
 	// Providing all messages to the client
 	// side is the easiest way to get started
 	const messages = await getMessages();

@@ -22,9 +22,9 @@ const HeroSection = () => {
 					{locale === "en" && (
 						<div className="dark:text-white">
 							<div className="font-bold text-6xl text-black dark:text-white mb-4 leading-[1.15]">
-								Hey there, I'm Cemre.
+								Hey there, I&apos;m Cemre.
 							</div>{" "}
-							I'm a <span className="font-bold">front-end developer</span> with{" "}
+							I&apos;m a <span className="font-bold">front-end developer</span> with{" "}
 							<span className="font-bold">1.5+ years</span> of experience. I enjoy building{" "}
 							<span className="italic">sites & apps</span>. My focus is <span className="font-medium">React js</span>.
 						</div>

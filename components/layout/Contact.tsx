@@ -7,9 +7,9 @@ import SectionMainHeadings from "../SectionMainHeadings";
 export const Contact = () => {
 	const t = useTranslations("contact-component");
 	const [isPending, setIsPending] = useState(false);
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const formData = new FormData(e.target);
+		const formData = new FormData(e.target as HTMLFormElement);
 		const senderEmail = formData.get("senderEmail");
 		const message = formData.get("message");
 		setIsPending(true);

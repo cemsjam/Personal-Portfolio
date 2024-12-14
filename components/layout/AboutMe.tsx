@@ -26,8 +26,8 @@ const AboutMe = () => {
 							</p>
 
 							<p>
-								<span className="italic">When I'm not coding</span>, I enjoy playing video games, watching movies, and
-								playing with my guitar. I also enjoy <span className="font-bold">learning new things.</span>
+								<span className="italic">When I&apos;m not coding</span>, I enjoy playing video games, watching movies,
+								and playing with my guitar. I also enjoy <span className="font-bold">learning new things.</span>
 							</p>
 						</>
 					)}
