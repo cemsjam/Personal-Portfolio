@@ -126,7 +126,7 @@ function Projects() {
 								<AccordionItem value="item-10">
 									<AccordionTrigger>URL Tabanlı Durum Yönetimi</AccordionTrigger>
 									<AccordionContent>
-										Arama sayfası filtreleri, URL'ye yansıtılarak kolayca paylaşılır ve diğer kullanıcıların aynı
+										Arama sayfası filtreleri, URL&apos;ye yansıtılarak kolayca paylaşılır ve diğer kullanıcıların aynı
 										filtrelenmiş sonuçları görmesine olanak tanır.
 									</AccordionContent>
 								</AccordionItem>
