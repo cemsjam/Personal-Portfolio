@@ -1,4 +1,10 @@
 {
+	"head": {
+		"metadata": {
+			"title": "Cemre | Kişisel Portföy",
+			"description": "1,5 yılı aşkın deneyime sahip, etkileyici ve işlevsel web siteleri oluşturmada çalışmalar yapmış bir web geliştiriciyim. Son projelerimi görmek ve becerilerim hakkında daha fazla bilgi edinmek için portföyümü keşfedin."
+		}
+	},
 	"language": "Dil",
 	"turkish": "Türkçe",
 	"english": "İngilizce",
@@ -21,6 +27,8 @@
 		"title": "İletişim",
 		"info-start": "Lütfen doğrudan benimle iletişime geçin",
 		"info-end": "veya bu formu kullanarak.",
+		"emailLabel": "Email Adresi",
+		"textLabel": "Mesaj",
 		"send-email": "Gönder",
 		"success-message": "E-posta başarıyla gönderildi.",
 		"error-message": "Bir hata oluştu. Lütfen cemrekur@gmail.com adresinden benimle iletişime geçin."
@@ -35,6 +43,7 @@
 	"projects": {
 		"title": "Projeler",
 		"sourceCodeLabel": "Kaynak Kod",
-		"visitSiteLabel": "Siteye Git"
+		"visitSiteLabel": "Siteye Git",
+		"techStacks": "Teknoloji Yığını"
 	}
 }
