@@ -40,10 +40,10 @@ function Projects() {
 					</div>
 					{/* INFO SIDE */}
 					<div className="md:w-1/2">
-						<ProjectHeading> E-commerce App</ProjectHeading>
+						<ProjectHeading> {locale === "tr" ? "E-ticaret Uygulaması" : "E-commerce App"}</ProjectHeading>
 						{/* STACKS */}
 						<div className="mb-4">
-							<h3 className="font-semibold mb-4">Tech Stacks</h3>
+							<h3 className="font-semibold mb-4 text-black dark:text-black">{t("techStacks")}</h3>
 							<ul className="flex gap-2">
 								<li>
 									<FaHtml5 size={24} fill="#e34c26" />
@@ -219,10 +219,10 @@ function Projects() {
 				<div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
 					{/* INFO SIDE */}
 					<div className="md:w-1/2">
-						<ProjectHeading>Wordle Clone</ProjectHeading>
+						<ProjectHeading>{locale === "tr" ? "Wordle Klonu" : "Wordle Clone"}</ProjectHeading>
 						{/* STACKS */}
 						<div className="mb-4">
-							<h3 className="font-semibold mb-4">Tech Stacks</h3>
+							<h3 className="font-semibold mb-4 text-black dark:text-black">{t("techStacks")}</h3>
 							<ul className="flex gap-2">
 								<li>
 									<FaHtml5 size={24} fill="#e34c26" />
@@ -446,10 +446,10 @@ function Projects() {
 					</div>
 					{/* INFO SIDE */}
 					<div className="md:w-1/2">
-						<ProjectHeading>Crowdfunding Page</ProjectHeading>
+						<ProjectHeading>{locale === "tr" ? "Kitlesel Fonlama Sayfası" : "Crowdfunding Page"}</ProjectHeading>
 						{/* STACKS */}
 						<div className="mb-4">
-							<h3 className="font-semibold mb-4">Tech Stacks</h3>
+							<h3 className="font-semibold mb-4 text-black dark:text-black">{t("techStacks")}</h3>
 							<ul className="flex gap-2">
 								<li>
 									<FaHtml5 size={24} fill="#e34c26" />

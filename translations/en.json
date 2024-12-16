@@ -1,4 +1,10 @@
 {
+	"head": {
+		"metadata": {
+			"title": "Cemre | Personal Portfolio",
+			"description": "I'm a skilled front-end developer with 1.5+ years of experience in crafting stunning and functional websites. Explore my portfolio to see my latest projects and learn more about my skills."
+		}
+	},
 	"language": "Language",
 	"turkish": "Turkish",
 	"english": "English",
@@ -21,6 +27,8 @@
 		"title": "Contact Me",
 		"info-start": "Please contact me directly at",
 		"info-end": "or through this form.",
+		"emailLabel": "Email Adress",
+		"textLabel": "Message",
 		"send-email": "Send Email",
 		"success-message": "Email has been sent successfully.",
 		"error-message": "An error has occurred. Please contact us at cemrekur@gmail.com."
@@ -35,6 +43,7 @@
 	"projects": {
 		"title": "Projects",
 		"sourceCodeLabel": "Source Code",
-		"visitSiteLabel": "Visit Site"
+		"visitSiteLabel": "Visit Site",
+		"techStacks": "Tech Stacks"
 	}
 }
