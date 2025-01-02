@@ -48,13 +48,7 @@ const HeroSection = () => {
 						>
 							{t("contactLabel")} <BsArrowRight fill="#000" size={18} />
 						</Link>
-						<Link
-							className="flex h-[52px] min-w-[220px] text-center justify-center gap-2 items-center px-7 py-3 rounded-full font-bold primary-button"
-							href="#implement"
-						>
-							{t("downloadLabel")}
-							<HiDownload size={18} />
-						</Link>
+						<DownloadCVButton />
 					</div>
 				</div>
 			</div>
@@ -63,3 +57,33 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const DownloadCVButton = () => {
+	const t = useTranslations("hero");
+	const locale = useLocale() as Locale;
+	const pdfPath =
+		locale === "tr"
+			? "/static/pdf/Cemre_Kur_Özgeçmiş_Web_Geliştirici_TR.pdf"
+			: "/static/pdf/Cemre_Kur_Resume_Web_Development_EN.pdf";
+
+	const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault(); // Prevent navigation
+		const link = document.createElement("a");
+		link.href = pdfPath;
+		link.download = pdfPath.split("/").pop() || "/static/pdf/Cemre_Kur_Resume_Web_Development_EN.pdf"; // Use the file name dynamically
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+	return (
+		<Link href={pdfPath} passHref legacyBehavior>
+			<a
+				className="flex h-[52px] min-w-[220px] text-center justify-center gap-2 items-center px-7 py-3 rounded-full font-bold primary-button"
+				onClick={handleDownload}
+			>
+				{t("downloadLabel")}
+				<HiDownload size={18} />
+			</a>
+		</Link>
+	);
+};
