@@ -15,7 +15,7 @@ function Projects() {
 	const t = useTranslations("projects");
 	const locale = useLocale() as Locale;
 	return (
-		<section id="projects" className="w-full flex flex-col gap-24">
+		<section id="projects" className="w-full flex flex-col gap-24 section-scroll-margin">
 			<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 
 			{/* PROJECT 1 E-COMMERCE */}

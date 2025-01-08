@@ -21,7 +21,7 @@ export default function MainNavigation() {
 		<div>
 			<ToggleMenu toggleMenu={toggleMenu} />
 			<Transition.Root show={openMenu} as={Fragment}>
-				<Dialog as="div" className="relative z-50 lg:hidden" onClose={setOpenMenu}>
+				<Dialog as="div" className="relative z-[100] lg:hidden" onClose={setOpenMenu}>
 					<Transition.Child
 						as={Fragment}
 						enter="ease-in-out duration-500"
@@ -53,7 +53,9 @@ export default function MainNavigation() {
 												<span className="sr-only">Close panel</span>
 												<IoMdClose className="h-6 w-6" aria-hidden="true" />
 											</button>
-											<Logo classes="order-none" />
+											<div onClick={() => setOpenMenu(false)}>
+												<Logo classes="order-none" />
+											</div>
 											<ThemeSwitch />
 										</div>
 										{/* content */}

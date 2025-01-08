@@ -71,7 +71,7 @@ export const Contact = () => {
 	};
 
 	return (
-		<section id="contact" className="w-full mt-24 lg:mt-52 mb-24 lg:mb-52 px-4">
+		<section id="contact" className="w-full mt-24 lg:mt-52 mb-24 lg:mb-52 px-4 section-scroll-margin">
 			<div className="w-full max-w-screen-md mx-auto mt-auto">
 				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<p className="text-gray-700 -mt-6 dark:text-white/80 text-center">
