@@ -4,7 +4,8 @@ import Widgets from "@/components/layout/Widgets";
 
 function Header() {
 	return (
-		<header>
+		// <header className="sticky z-[100] top-0 bg-white dark:bg-black">
+		<header className="sticky z-[50] top-0 bg-white/90 dark:bg-black/80 backdrop-blur-sm">
 			<div className="container flex items-center justify-between h-16">
 				<Logo />
 				<MainNavigation />
@@ -12,7 +13,6 @@ function Header() {
 					<Widgets />
 				</div>
 			</div>
-			<div className="clipped-bg"></div>
 		</header>
 	);
 }

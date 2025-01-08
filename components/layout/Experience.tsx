@@ -8,7 +8,7 @@ function Experience() {
 	const t = useTranslations("experience");
 	const locale = useLocale() as Locale;
 	return (
-		<section id="experience" className="w-full mt-24 lg:mt-36 mb-24 lg:mb-36 px-8 scroll-mt-12">
+		<section id="experience" className="w-full mt-24 lg:mt-36 mb-24 lg:mb-36 px-8 section-scroll-margin">
 			<div className="w-full max-w-screen-md mx-auto mt-auto">
 				<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 				<div className="font-bold -ml-4">{t("summary")}</div>

@@ -59,3 +59,6 @@ html[data-mode="dark"] .project-card-bg {
 .project-accordion * {
 	color: black;
 }
+.section-scroll-margin {
+	scroll-margin-top: 6rem;
+}

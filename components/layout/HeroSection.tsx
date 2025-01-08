@@ -21,7 +21,7 @@ const HeroSection = () => {
 					{/* INFO */}
 					{locale === "en" && (
 						<div className="dark:text-white">
-							<div className="font-bold text-6xl text-black dark:text-white mb-4 leading-[1.15]">
+							<div className="font-bold text-5xl lg:text-6xl text-black dark:text-white mb-4 leading-[1.15]">
 								Hey there, I&apos;m Cemre.
 							</div>{" "}
 							I&apos;m a <span className="font-bold">front-end developer</span> with{" "}
@@ -31,7 +31,7 @@ const HeroSection = () => {
 					)}
 					{locale === "tr" && (
 						<div className="dark:text-white">
-							<div className="font-bold text-6xl text-black dark:text-white mb-4 leading-[1.15]">
+							<div className="font-bold text-5xl lg:text-6xl text-black dark:text-white mb-4 leading-[1.15]">
 								Merhaba, ben Cemre.
 							</div>
 							<span className="font-bold">1.5+ yıllık</span> deneyime sahip bir{" "}

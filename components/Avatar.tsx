@@ -7,7 +7,7 @@ function Avatar() {
 				// className="rounded-[50%] overflow-hidden border border-black"
 				// className="rounded-[50%] overflow-hidden"
 				// src={"/static/images/portfolio-cems.jpg"}
-				className="max-w-[400px]"
+				className="max-h-[375px] object-contain md:max-h-[450px] max-w-[400px]"
 				src={"/static/images/casablanca-cems-transparent.png"}
 				alt="Cemre's personal image"
 				priority
