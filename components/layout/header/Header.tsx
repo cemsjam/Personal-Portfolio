@@ -4,8 +4,7 @@ import Widgets from "@/components/layout/Widgets";
 
 function Header() {
 	return (
-		// <header className="sticky z-[100] top-0 bg-white dark:bg-black">
-		<header className="sticky z-[70] top-0 bg-white/90 dark:bg-black/80 backdrop-blur-sm">
+		<header className="sticky z-[70] top-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
 			<div className="container flex items-center justify-between h-16">
 				<Logo />
 				<MainNavigation />

@@ -29,8 +29,9 @@ const AboutMe = () => {
 							</p>
 
 							<p>
-								<span className="italic">When I&apos;m not coding</span>, I enjoy playing video games, watching movies,
-								and playing with my guitar. I also enjoy <span className="font-bold">learning new things.</span>
+								<span className="italic">When I&apos;m not coding</span>, I enjoy riding my motorycycle, playing video
+								games, watching movies, and playing with my guitar. I also enjoy{" "}
+								<span className="font-bold">learning new things.</span>
 							</p>
 						</>
 					)}
@@ -52,9 +53,9 @@ const AboutMe = () => {
 							</p>
 
 							<p>
-								<span className="italic">Kod yazmadığım zamanlarda</span> video oyunları oynamaktan, film izlemekten ve
-								gitar çalmaktan keyif alıyorum. Ayrıca <span className="font-bold">yeni şeyler öğrenmekten</span> de
-								büyük keyif alıyorum.
+								<span className="italic">Kod yazmadığım zamanlarda</span>motorsikletimi sürmekten, video oyunları
+								oynamaktan, film izlemekten ve gitar çalmaktan keyif alıyorum. Ayrıca{" "}
+								<span className="font-bold">yeni şeyler öğrenmekten</span> de büyük keyif alıyorum.
 							</p>
 						</>
 					)}

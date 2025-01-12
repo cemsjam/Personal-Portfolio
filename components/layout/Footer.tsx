@@ -18,7 +18,9 @@ export default function Footer() {
 							{mainNavLinks.map((nav) => {
 								return (
 									<li key={nav.hash}>
-										<Link href={nav.hash}>{nav.name}</Link>
+										<Link className="hover:text-custom-primary" href={nav.hash}>
+											{nav.name}
+										</Link>
 									</li>
 								);
 							})}
