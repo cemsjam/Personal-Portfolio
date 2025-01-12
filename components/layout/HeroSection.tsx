@@ -25,7 +25,7 @@ const HeroSection = () => {
 								Hey there, I&apos;m Cemre.
 							</div>{" "}
 							I&apos;m a <span className="font-bold">front-end developer</span> with{" "}
-							<span className="font-bold">1.5+ years</span> of experience. I enjoy building{" "}
+							<span className="font-bold">2+ years</span> of experience. I enjoy building{" "}
 							<span className="italic">sites & apps</span>. My focus is <span className="font-medium">React js</span>.
 						</div>
 					)}
@@ -34,7 +34,7 @@ const HeroSection = () => {
 							<div className="font-bold text-5xl lg:text-6xl text-black dark:text-white mb-4 leading-[1.15]">
 								Merhaba, ben Cemre.
 							</div>
-							<span className="font-bold">1.5+ yıllık</span> deneyime sahip bir{" "}
+							<span className="font-bold">2+ yıllık</span> deneyime sahip bir{" "}
 							<span className="font-bold">front-end geliştiricisiyim</span>.
 							<span className="italic">Web siteleri ve uygulamalar</span> geliştirmekten keyif alıyorum. Yoğunlaştığım
 							kısım ise <span className="font-medium">React.js</span>.

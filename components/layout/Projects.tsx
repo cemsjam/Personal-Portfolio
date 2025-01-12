@@ -197,7 +197,9 @@ function Projects() {
 						{/* CTA */}
 						<div className="flex justify-end gap-2 mt-8">
 							<Link
-								href={""}
+								href={"https://github.com/cemsjam/React-E-Commerce-App"}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 font-bold text-black border border-black rounded-full bg-white hover:bg-black hover:text-white active:scale-95"
 							>
 								{t("sourceCodeLabel")}
@@ -382,7 +384,9 @@ function Projects() {
 						{/* CTA */}
 						<div className="flex gap-2 mt-8">
 							<Link
-								href={""}
+								href={"https://github.com/cemsjam/Wordle-clone-with-vanilla-js"}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 font-bold text-black border border-black rounded-full bg-white hover:bg-black hover:text-white active:scale-95"
 							>
 								{t("sourceCodeLabel")}
@@ -579,7 +583,9 @@ function Projects() {
 						{/* CTA */}
 						<div className="flex justify-end gap-2 mt-8">
 							<Link
-								href={""}
+								href={"https://github.com/cemsjam/Wordle-clone-with-vanilla-js"}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 font-bold text-black border border-black rounded-full bg-white hover:bg-black hover:text-white active:scale-95"
 							>
 								{t("sourceCodeLabel")}

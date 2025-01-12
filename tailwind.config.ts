@@ -21,6 +21,7 @@ const config = {
 		},
 		extend: {
 			colors: {
+				"custom-primary": "var(--primary-btn-bg-clr)",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
