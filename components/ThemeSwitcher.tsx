@@ -1,10 +1,13 @@
 "use client";
+import { Locale } from "@/src/i18n";
+import { useLocale } from "next-intl";
 import React, { useEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
 type Theme = "light" | "dark";
 
 export default function ThemeSwitcher() {
+	const locale = useLocale() as Locale;
 	const [theme, setTheme] = useState<Theme>("dark");
 
 	useEffect(() => {
@@ -14,9 +17,7 @@ export default function ThemeSwitcher() {
 			document.documentElement.dataset.mode = parsedLocalTheme;
 			setTheme(parsedLocalTheme);
 		} else {
-			let systemTheme = window.matchMedia("(prefers-color-scheme:dark)").matches
-				? "dark"
-				: ("light" as Theme);
+			let systemTheme = window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : ("light" as Theme);
 			document.documentElement.dataset.mode = systemTheme;
 			setTheme(systemTheme);
 		}
@@ -34,6 +35,7 @@ export default function ThemeSwitcher() {
 				role="switch"
 				aria-checked={theme === "dark"}
 				id="themeSwitch"
+				aria-labelledby="theme-label"
 				onClick={toggleTheme}
 			>
 				<span className="flex items-center w-[42px] h-[24px] bg-zinc-200 dark:bg-zinc-800 rounded-full">
@@ -50,9 +52,9 @@ export default function ThemeSwitcher() {
 					</span>
 				</span>
 			</button>
-			<label htmlFor="themeSwitch" className="block cursor-pointer">
-				<span className="sr-only">Toggle Theme</span>
-			</label>
+			<span className="sr-only" id="theme-label">
+				{locale === "en" ? "Toggle Theme" : "Tema Değiştir"}
+			</span>
 		</div>
 	);
 }
