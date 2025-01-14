@@ -35,6 +35,7 @@ export const LanguageSwitcher = () => {
 				<div className="gradient-border-parent" style={socialLinkCustomStylesForGradient}>
 					<button type="button" className="gradient-border flex items-center justify-center h-8 w-8">
 						<SlGlobe size={18} className="text-zinc-700 dark:text-white" />
+						<span className="sr-only">{locale === "tr" ? "Dil Seç" : "Choose a Language"}</span>
 					</button>
 				</div>
 			</DropdownMenuTrigger>

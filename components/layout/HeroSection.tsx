@@ -17,16 +17,18 @@ const HeroSection = () => {
 			<div className="flex flex-col md:flex-row justify-center items-center gap-8 m-auto container">
 				<Avatar />
 
-				<div className="flex flex-col justify-center max-w-[60ch] gap-8 relative z-50">
+				<div className="flex flex-col justify-center max-w-[60ch] gap-8 relative z-50 px-2 md:px-0">
 					{/* INFO */}
 					{locale === "en" && (
 						<div className="dark:text-white">
 							<div className="font-bold text-5xl lg:text-6xl text-black dark:text-white mb-4 leading-[1.15]">
 								Hey there, I&apos;m Cemre.
 							</div>{" "}
-							I&apos;m a <span className="font-bold">front-end developer</span> with{" "}
-							<span className="font-bold">2+ years</span> of experience. I enjoy building{" "}
-							<span className="italic">sites & apps</span>. My focus is <span className="font-medium">React js</span>.
+							<p className="text-gray-600 dark:text-white">
+								I&apos;m a <span className="font-bold">front-end developer</span> with{" "}
+								<span className="font-bold">2+ years</span> of experience. I enjoy building{" "}
+								<span className="italic">sites & apps</span>. My focus is <span className="font-medium">React js</span>.
+							</p>
 						</div>
 					)}
 					{locale === "tr" && (
@@ -34,10 +36,12 @@ const HeroSection = () => {
 							<div className="font-bold text-5xl lg:text-6xl text-black dark:text-white mb-4 leading-[1.15]">
 								Merhaba, ben Cemre.
 							</div>
-							<span className="font-bold">2+ yıllık</span> deneyime sahip bir{" "}
-							<span className="font-bold">front-end geliştiricisiyim</span>.
-							<span className="italic">Web siteleri ve uygulamalar</span> geliştirmekten keyif alıyorum. Yoğunlaştığım
-							kısım ise <span className="font-medium">React.js</span>.
+							<p className="text-gray-600 dark:text-white">
+								<span className="font-bold">2+ yıllık</span> deneyime sahip bir{" "}
+								<span className="font-bold">front-end geliştiricisiyim</span>.
+								<span className="italic">Web siteleri ve uygulamalar</span> geliştirmekten keyif alıyorum. Yoğunlaştığım
+								kısım ise <span className="font-medium">React.js</span>.
+							</p>
 						</div>
 					)}
 					{/* ACTIONS */}
