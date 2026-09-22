@@ -6,9 +6,10 @@ import { Locale } from "@/src/i18n";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FaHtml5, FaReact } from "react-icons/fa";
+import { FiLock } from "react-icons/fi";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs, SiPostgresql, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
 import SectionMainHeadings from "../SectionMainHeadings";
 // #D9FE54
 function Projects() {
@@ -18,6 +19,247 @@ function Projects() {
 		<section id="projects" className="w-full flex flex-col gap-24 section-scroll-margin">
 			<SectionMainHeadings>{t("title")}</SectionMainHeadings>
 
+			{/* PROJECT PRICE CATCH */}
+			<div className=" max-w-screen-2xl w-full mx-auto px-4">
+				<div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
+					{/* IMAGE SIDE */}
+					<div className="flex md:w-1/2 items-center justify-center">
+						<div className=" w-full max-w-sm md:max-w-none lg:mx-0 rounded-2xl overflow-hidden project-image-shadow -mt-[6rem]">
+							<Toolbar />
+							<div className="border border-zinc-600 overflow-hidden rounded-b-2xl ">
+								<Link href={"https://price-catch.vercel.app/"} target="_blank" rel="noopener noreferrer">
+									<Image
+										src={"/static/images/price-catch-analytics-full-page-demo.png"}
+										className="w-full"
+										alt={
+											locale === "tr"
+												? "Price Catch fiyat takip ve rekabet analiz dashboard'u"
+												: "Price Catch price tracking and competitive analysis dashboard"
+										}
+										width={1280}
+										height={1280}
+									/>
+								</Link>
+							</div>
+						</div>
+					</div>
+					{/* INFO SIDE */}
+					<div className="md:w-1/2">
+						<ProjectHeading>Price Catch</ProjectHeading>
+						{/* STACKS */}
+						<div className="mb-4">
+							<h3 className="font-semibold mb-4 text-black dark:text-black">{t("techStacks")}</h3>
+							<ul className="flex gap-2">
+								<li>
+									<SiNextdotjs size={24} fill="#000000" />
+								</li>
+								<li>
+									<SiTypescript size={24} fill="#3178c6" />
+								</li>
+								<li>
+									<FaReact size={24} fill="#61dbfb" />
+								</li>
+								<li>
+									<SiPrisma size={24} fill="#2d3748" />
+								</li>
+								<li>
+									<SiPostgresql size={24} fill="#4169e1" />
+								</li>
+								<li>
+									<SiTailwindcss size={24} fill="#06b6d4" />
+								</li>
+							</ul>
+						</div>
+						{locale === "tr" && (
+							<Accordion type="single" collapsible className="project-accordion w-full ">
+								<AccordionItem value="pricecatch-item-1">
+									<AccordionTrigger>Ürün ve Rakip Fiyat Takibi</AccordionTrigger>
+									<AccordionContent>
+										Ürünlerin ve rakip fiyatlarının düzenli olarak izlenmesini ve fiyat değişikliklerinin
+										kaydedilmesini sağlar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-2">
+									<AccordionTrigger>Otomatik Fiyat Değişikliği Tespiti</AccordionTrigger>
+									<AccordionContent>
+										Monitoring kontrolleri sonucunda kendi ürünlerindeki ve rakiplerdeki fiyat hareketlerini tespit
+										eder.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-3">
+									<AccordionTrigger>Ürün Bazlı Rekabet Analizi</AccordionTrigger>
+									<AccordionContent>
+										Rakip hareketlerini ürün merkezinde birleştirerek her ürünün mevcut rekabet durumunu gösterir.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-4">
+									<AccordionTrigger>Aksiyon Odaklı Durumlar</AccordionTrigger>
+									<AccordionContent>
+										Ürünleri &quot;Aksiyon gerekli&quot;, &quot;Takip et&quot;, &quot;Avantajlı&quot; gibi durumlarla
+										önceliklendirerek yöneticinin dikkat etmesi gereken ürünleri öne çıkarır.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-5">
+									<AccordionTrigger>Analytics Dashboard</AccordionTrigger>
+									<AccordionContent>
+										Ürünlerdeki fiyat değişikliklerini, rakip hareketlerini ve en aktif ürün/rakipleri tek bir
+										analytics ekranında sunar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-6">
+									<AccordionTrigger>Piyasa Fiyat Pozisyonu</AccordionTrigger>
+									<AccordionContent>
+										Kendi ürün fiyatını mevcut rakip fiyatlarıyla karşılaştırarak ürünün piyasadaki fiyat sırasını
+										gösterir.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-7">
+									<AccordionTrigger>Fiyat Geçmişi ve Grafikler</AccordionTrigger>
+									<AccordionContent>
+										Ürün ve rakip fiyatlarının zaman içerisindeki değişimini grafik ve detaylı geçmiş kayıtlarıyla
+										gösterir.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-8">
+									<AccordionTrigger>Otomatik Monitoring</AccordionTrigger>
+									<AccordionContent>
+										Ürünler için belirlenen monitoring aralıklarına göre otomatik fiyat kontrolleri gerçekleştirir.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-9">
+									<AccordionTrigger>Monitoring Durumu</AccordionTrigger>
+									<AccordionContent>
+										Sistem genelindeki monitoring durumunu ve aktif kontrol sayılarını global dashboard/sidebar
+										üzerinden takip etmeyi sağlar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-10">
+									<AccordionTrigger>Responsive SaaS Dashboard</AccordionTrigger>
+									<AccordionContent>
+										Ürün yönetimi, analytics, monitoring ve fiyat detaylarını farklı ekran boyutlarında kullanılabilir
+										şekilde sunar.
+									</AccordionContent>
+								</AccordionItem>
+							</Accordion>
+						)}
+						{locale === "en" && (
+							<Accordion type="single" collapsible className="project-accordion w-full ">
+								<AccordionItem value="pricecatch-item-1">
+									<AccordionTrigger>Product and Competitor Price Tracking</AccordionTrigger>
+									<AccordionContent>
+										Regularly monitors product and competitor prices and records price changes over time.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-2">
+									<AccordionTrigger>Automatic Price Change Detection</AccordionTrigger>
+									<AccordionContent>
+										Detects price movements for both own products and competitors during monitoring checks.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-3">
+									<AccordionTrigger>Product-Centric Competitive Analysis</AccordionTrigger>
+									<AccordionContent>
+										Combines competitor movements around each product to provide a clear view of its current
+										competitive position.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-4">
+									<AccordionTrigger>Action-Oriented Statuses</AccordionTrigger>
+									<AccordionContent>
+										Prioritizes products with statuses such as &quot;Act Now&quot;, &quot;Watch&quot;, and
+										&quot;Advantage&quot; to highlight products requiring attention.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-5">
+									<AccordionTrigger>Analytics Dashboard</AccordionTrigger>
+									<AccordionContent>
+										Provides a centralized view of product price changes, competitor movements, and the most active
+										products and competitors.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-6">
+									<AccordionTrigger>Market Price Position</AccordionTrigger>
+									<AccordionContent>
+										Compares the product&apos;s current price against valid competitor prices and displays its
+										position within the market.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-7">
+									<AccordionTrigger>Price History and Charts</AccordionTrigger>
+									<AccordionContent>
+										Visualizes changes in own and competitor prices over time with charts and detailed historical
+										records.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-8">
+									<AccordionTrigger>Automated Monitoring</AccordionTrigger>
+									<AccordionContent>
+										Automatically performs price checks according to each product&apos;s configured monitoring
+										interval.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-9">
+									<AccordionTrigger>Monitoring Status</AccordionTrigger>
+									<AccordionContent>
+										Provides an overview of the system monitoring state and active monitoring counts directly from the
+										global dashboard/sidebar.
+									</AccordionContent>
+								</AccordionItem>
+
+								<AccordionItem value="pricecatch-item-10">
+									<AccordionTrigger>Responsive SaaS Dashboard</AccordionTrigger>
+									<AccordionContent>
+										Provides a responsive interface for product management, analytics, monitoring, and detailed price
+										analysis.
+									</AccordionContent>
+								</AccordionItem>
+							</Accordion>
+						)}
+						{/* PRIVATE SAAS NOTICE */}
+						<div className="flex items-start gap-2 mt-6 text-zinc-500 dark:text-zinc-400">
+							<FiLock size={16} className="mt-1 shrink-0" />
+							<div>
+								<p className="text-sm font-semibold text-zinc-600 dark:text-zinc-300">
+									{locale === "tr" ? "Private SaaS Project" : "Private SaaS Project"}
+								</p>
+								<p className="text-sm">
+									{locale === "tr"
+										? "Ticari kullanım amacıyla geliştirilen bu projenin kaynak kodu private repository'de tutulmaktadır."
+										: "The source code is kept private as the project is being developed for commercial use."}
+								</p>
+							</div>
+						</div>
+						{/* CTA */}
+						<div className="flex justify-end gap-2 mt-4">
+							<Link
+								href={"https://price-catch.vercel.app/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex h-[52px] min-w-[150px] gap-2 justify-center text-center items-center px-7 py-3 rounded-full font-bold primary-button-no-shadow"
+							>
+								{t("visitSiteLabel")}
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
 			{/* PROJECT 1 E-COMMERCE */}
 			<div className=" max-w-screen-2xl w-full mx-auto px-4">
 				<div className="flex flex-col md:flex-row gap-8 md:gap-12 bg-gray-50 project-card-bg p-8 rounded-2xl dark:text-[#EDEDEF]">
